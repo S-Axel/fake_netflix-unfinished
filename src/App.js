@@ -1,6 +1,16 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import LoginPage from './containers/LoginPage';
+
 function App() {
   return (
-    <div>Hello World!</div>
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/*" element={<Navigate to="/login" />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
