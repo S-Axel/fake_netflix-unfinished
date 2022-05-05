@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "classnames": "^2.3.1",
     "eslint-config-airbnb": "^19.0.4",
     "prop-types": "^15.8.1",
     "react": "^18.1.0",
@@ -34,7 +35,8 @@
         "rules": {
           "react/react-in-jsx-scope": "off",
           "react/jsx-filename-extension": "off",
-          "object-curly-newline": "off"
+          "object-curly-newline": "off",
+          "react/jsx-props-no-spreading": "off"
         }
       }
     ]

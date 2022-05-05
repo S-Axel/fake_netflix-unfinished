@@ -1,8 +1,16 @@
+import { Link } from 'react-router-dom';
+
+import LogoNetflix from '../../components/LogoNetflix';
+
 function LoginPage() {
   return (
-    <p>
-      LoginPage
-    </p>
+    <div>
+      <header>
+        <Link to="/">
+          <LogoNetflix />
+        </Link>
+      </header>
+    </div>
   );
 }
 
