@@ -2,7 +2,7 @@ import { memo } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
-import './index.css';
+import './styles.css';
 
 function LogoNetflix({ className, ...rest }) {
   return (
