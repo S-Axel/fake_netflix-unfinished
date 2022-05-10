@@ -1,3 +1,7 @@
-.logo-netflix {
+.comp-logo-netflix {
+    display: flex;
+}
+
+.comp-logo-netflix__svg {
     fill: #e50914;
 }

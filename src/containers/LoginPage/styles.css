@@ -1,6 +1,8 @@
 .login-page {
     background-color: #000;
     min-height: 100vh;
+    position: relative;
+    z-index: 0;
 }
 
 .background {
@@ -9,6 +11,7 @@
     width: 100%;
     opacity: 0;
     overflow: hidden;
+    z-index: -1;
 }
 
 .background__img {
@@ -17,15 +20,17 @@
 }
 
 .header {
-    padding: 1.34rem 0;
-    background: linear-gradient(to bottom,rgba(0,0,0,.5) 0,rgba(0,0,0,0) 100%);
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.5) 0,rgba(0, 0, 0, 0) 100%);
     position: absolute;
     width: 100%;
+    height: 4.7rem;
+    display: flex;
+    align-items: center;
 }
 
 .header__logo {
-    height: 1.25rem;
     margin-left: 3%;
+    height: 1.25rem;
 }
 
 @media screen and (min-width: 440px) {

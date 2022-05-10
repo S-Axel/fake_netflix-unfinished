@@ -1,7 +1,5 @@
-import { Link } from 'react-router-dom';
-
-import LogoNetflix from '../../components/LogoNetflix';
 import './styles.css';
+import LogoNetflix from '../../components/LogoNetflix';
 import backgroundImg from '../../assets/images/logged_out_background.jpg';
 
 function LoginPage() {
@@ -11,9 +9,7 @@ function LoginPage() {
         <img className="background__img" src={backgroundImg} alt="background" />
       </div>
       <header className="header">
-        <Link to="/">
-          <LogoNetflix className="header__logo" />
-        </Link>
+        <LogoNetflix className="header__logo" />
       </header>
     </div>
   );
