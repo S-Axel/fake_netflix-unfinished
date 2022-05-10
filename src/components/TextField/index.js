@@ -39,7 +39,7 @@ function TextField({
         />
         <label className="text-field__label" htmlFor={id}>{label}</label>
       </div>
-      <p className="text-field__error">{error}</p>
+      {error && <p className="text-field__error">{error}</p>}
     </div>
   );
 }

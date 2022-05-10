@@ -16,9 +16,9 @@
     top: 50%;
     transform: translateY(-50%);
     margin-left: var(--input-padding-x);
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition-property: font-size, top, transform;
-    transition-duration: 0.2s;
+    transition-duration: 0.1s;
 }
 
 .text-field__input {
