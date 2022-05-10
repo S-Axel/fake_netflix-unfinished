@@ -27,7 +27,7 @@ function LoginPage() {
       </header>
       <main className="login-form__container">
         <div className="login-form">
-          <h1>Sign In</h1>
+          <h1 className="login-form__title">Sign In</h1>
           <form onSubmit={() => null}>
             <TextField
               label="Email or phone number"

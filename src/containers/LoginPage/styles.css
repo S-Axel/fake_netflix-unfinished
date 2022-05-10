@@ -48,6 +48,10 @@
 
 }
 
+.login-form__title {
+    margin: 0 0 1.67rem;
+}
+
 @media screen and (min-width: 440px) {
     .header__logo {
         height: 2.8rem;
@@ -57,5 +61,15 @@
 @media screen and (min-width: 740px) {
     .background {
         opacity: 0.5;
+    }
+
+    .login-form__container {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    .login-form {
+        padding: 60px 68px 40px 68px;
+        background-color: rgba(0, 0, 0, 0.75);
     }
 }
