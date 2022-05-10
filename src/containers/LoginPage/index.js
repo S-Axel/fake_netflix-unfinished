@@ -30,10 +30,19 @@ function LoginPage() {
           <h1 className="login-form__title">Sign In</h1>
           <form onSubmit={() => null}>
             <TextField
+              className="login-form__text-field"
               label="Email or phone number"
               id="emailOrPhone"
               name="emailOrPhone"
               value={formData.emailOrPhone}
+              onChange={onChangeHandler}
+            />
+            <TextField
+              className="login-form__text-field"
+              label="Password"
+              id="password"
+              name="password"
+              value={formData.password}
               onChange={onChangeHandler}
             />
           </form>

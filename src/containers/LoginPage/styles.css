@@ -52,6 +52,10 @@
     margin: 0 0 1.67rem;
 }
 
+.login-form__text-field {
+    margin-bottom: 1rem;
+}
+
 @media screen and (min-width: 440px) {
     .header__logo {
         height: 2.8rem;
