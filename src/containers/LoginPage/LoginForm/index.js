@@ -6,6 +6,7 @@ import TextField from '../../../components/TextField';
 function LoginForm() {
   const [formData, setFormData] = useState({
     emailOrPhone: '',
+    password: '',
   });
 
   const onChangeHandler = (e) => {

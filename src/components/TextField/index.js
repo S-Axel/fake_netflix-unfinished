@@ -54,11 +54,12 @@ TextField.propTypes = {
     PropTypes.number,
   ]).isRequired,
   onChange: PropTypes.func.isRequired,
-  error: PropTypes.string.isRequired,
+  error: PropTypes.string,
 };
 
 TextField.defaultProps = {
   className: '',
+  error: '',
 };
 
 export default memo(TextField);
