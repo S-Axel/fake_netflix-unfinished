@@ -39,22 +39,7 @@
     min-height: 100%;
 }
 
-.login-form {
-    color: #fff;
-    background-color: #000;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 3%;
 
-}
-
-.login-form__title {
-    margin: 0 0 1.67rem;
-}
-
-.login-form__text-field {
-    margin-bottom: 1rem;
-}
 
 @media screen and (min-width: 440px) {
     .header__logo {
@@ -70,10 +55,5 @@
     .login-form__container {
         width: 450px;
         margin: 0 auto;
-    }
-
-    .login-form {
-        padding: 60px 68px 40px 68px;
-        background-color: rgba(0, 0, 0, 0.75);
     }
 }
