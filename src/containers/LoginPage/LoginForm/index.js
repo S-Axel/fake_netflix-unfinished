@@ -1,40 +1,28 @@
-import { useState } from 'react';
-
 import './styles.css';
 import TextField from '../../../components/TextField';
+import useForm from '../../../hooks/useForm';
+import { validateEmailOrPhone, validatePassword } from '../../../validators';
 
 function LoginForm() {
-  const [formData, setFormData] = useState({
-    emailOrPhone: '',
-    password: '',
-  });
+  const { register, handleSubmit, formState: { errors } } = useForm();
 
-  const onChangeHandler = (e) => {
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      [e.target.name]: e.target.value,
-    }));
-  };
+  const onSubmit = () => {};
 
   return (
     <div className="login-form">
       <h1 className="login-form__title">Sign In</h1>
-      <form onSubmit={() => null}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <TextField
           className="login-form__text-field"
           label="Email or phone number"
-          id="emailOrPhone"
-          name="emailOrPhone"
-          value={formData.emailOrPhone}
-          onChange={onChangeHandler}
+          {...register('emailOrPhone', { validate: validateEmailOrPhone })}
+          error={errors.emailOrPhone}
         />
         <TextField
           className="login-form__text-field"
           label="Password"
-          id="password"
-          name="password"
-          value={formData.password}
-          onChange={onChangeHandler}
+          {...register('password', { validate: validatePassword })}
+          error={errors.password}
         />
       </form>
     </div>
