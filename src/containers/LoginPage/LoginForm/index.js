@@ -21,6 +21,7 @@ function LoginForm() {
         <TextField
           className="login-form__text-field"
           label="Password"
+          type="password"
           {...register('password', { validate: validatePassword })}
           error={errors.password}
         />

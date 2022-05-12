@@ -12,6 +12,7 @@ function TextField({
   value,
   onChange,
   error,
+  type,
   ...rest
 }) {
   const rootClassNames = classNames(
@@ -32,7 +33,7 @@ function TextField({
         <input
           className="text-field__input"
           id={id}
-          type="text"
+          type={type}
           name={name}
           value={value}
           onChange={onChange}
@@ -55,11 +56,13 @@ TextField.propTypes = {
   ]).isRequired,
   onChange: PropTypes.func.isRequired,
   error: PropTypes.string,
+  type: PropTypes.string,
 };
 
 TextField.defaultProps = {
   className: '',
   error: '',
+  type: 'text',
 };
 
 export default memo(TextField);
