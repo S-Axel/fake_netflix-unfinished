@@ -1,10 +1,12 @@
 import objectIsEmpty from '../../utils/objectIsEmpty';
+import isAFunction from '../../utils/isAFunction';
 
 const getHandleSubmit = (fields, errors) => {
   const handleSubmit = (onSubmit, onError) => (e) => {
-    if (objectIsEmpty(errors)) {
+    e.preventDefault();
+    if (isAFunction(onSubmit) && objectIsEmpty(errors)) {
       onSubmit(fields, e);
-    } else {
+    } else if (isAFunction(onError)) {
       onError(errors);
     }
   };
