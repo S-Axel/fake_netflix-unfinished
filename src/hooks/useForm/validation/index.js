@@ -1,21 +1,29 @@
-const addError = (fieldName, setErrors, error) => {
-  setErrors((prevErrors) => ({ ...prevErrors, [fieldName]: error }));
+const addError = (fieldName, setData, error) => {
+  setData((prevData) => (
+    {
+      ...prevData,
+      errors: {
+        ...prevData.errors,
+        [fieldName]: error,
+      },
+    }
+  ));
 };
 
-const clearError = (fieldName, setErrors) => {
-  setErrors((prevErrors) => {
-    const newErrors = { ...prevErrors };
-    delete newErrors[fieldName];
-    return newErrors;
+const clearError = (fieldName, setData) => {
+  setData((prevData) => {
+    const newData = { ...prevData };
+    delete newData.errors[fieldName];
+    return newData;
   });
 };
 
-const validate = (value, validationFn, fieldName, setErrors) => {
+const validate = (value, validationFn, fieldName, setData) => {
   const result = validationFn(value);
   if (result === true) {
-    clearError(fieldName, setErrors);
+    clearError(fieldName, setData);
   } else if (typeof result === 'string') {
-    addError(fieldName, setErrors, result);
+    addError(fieldName, setData, result);
   }
 };
 

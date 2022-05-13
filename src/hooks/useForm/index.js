@@ -3,13 +3,12 @@ import getRegister from './register';
 import getHandleSubmit from './handleSubmit';
 
 const useForm = () => {
-  const [fields, setFields] = useState({});
-  const [errors, setErrors] = useState({});
+  const [data, setData] = useState({ fields: {}, errors: {} });
 
   return {
-    register: getRegister(fields, setFields, setErrors),
-    handleSubmit: getHandleSubmit(fields, errors),
-    formState: { errors },
+    register: getRegister(data, setData),
+    handleSubmit: getHandleSubmit(data),
+    formState: { errors: data.errors },
   };
 };
 
