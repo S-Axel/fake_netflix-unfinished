@@ -1,5 +1,6 @@
 import './styles.css';
 import TextField from '../../../components/TextField';
+import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
 import { validateEmailOrPhone, validatePassword } from '../../../validators';
 
@@ -25,6 +26,12 @@ function LoginForm() {
           {...register('password', { validate: validatePassword })}
           error={errors.password}
         />
+        <Button
+          className="login-form__button"
+          type="submit"
+        >
+          Sign In
+        </Button>
       </form>
     </div>
   );

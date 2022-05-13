@@ -1,0 +1,11 @@
+.comp-button {
+    padding: 1rem;
+    width: 100%;
+    /*TODO put color inside a variable*/
+    background-color: #e50914;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 4px;
+}
