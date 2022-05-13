@@ -3,7 +3,7 @@
     min-height: 100vh;
     position: relative;
     z-index: 0;
-    --header-height: 4.7rem;
+    --header-height: 6rem;
 }
 
 .background {
