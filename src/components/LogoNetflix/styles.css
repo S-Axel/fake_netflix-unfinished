@@ -3,5 +3,5 @@
 }
 
 .rc-logo-netflix__svg {
-    fill: #e50914;
+    fill: var(--color-primary);
 }

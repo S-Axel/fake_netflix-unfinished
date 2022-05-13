@@ -2,8 +2,8 @@
     padding: 1rem;
     width: 100%;
     /*TODO put color inside a variable*/
-    background-color: #e50914;
-    color: #fff;
+    background-color: var(--color-primary);
+    color: var(--color-white);
     font-size: 1rem;
     font-weight: 700;
     border: none;
