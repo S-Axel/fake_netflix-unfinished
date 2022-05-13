@@ -6,8 +6,7 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 function Button({ className, type, children, ...rest }) {
-  // TODO replace comp with rc
-  const rootClassNames = classNames('comp-button', className);
+  const rootClassNames = classNames('rc-button', className);
 
   return (
     <button

@@ -16,10 +16,10 @@ function TextField({
   ...rest
 }) {
   const rootClassNames = classNames(
-    'text-field',
+    'rc-text-field',
     {
-      'text-field--has-content': !!value,
-      'text-field--error': !!error,
+      'rc-text-field--has-content': !!value,
+      'rc-text-field--error': !!error,
     },
     className,
   );
@@ -29,18 +29,18 @@ function TextField({
       className={rootClassNames}
       {...rest}
     >
-      <div className="text-field__input-container">
+      <div className="rc-text-field__input-container">
         <input
-          className="text-field__input"
+          className="rc-text-field__input"
           id={id}
           type={type}
           name={name}
           value={value}
           onChange={onChange}
         />
-        <label className="text-field__label" htmlFor={id}>{label}</label>
+        <label className="rc-text-field__label" htmlFor={id}>{label}</label>
       </div>
-      {error && <p className="text-field__error">{error}</p>}
+      {error && <p className="rc-text-field__error">{error}</p>}
     </div>
   );
 }
