@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import LoginPage from './containers/LoginPage';
+import LoginPage from '../LoginPage';
 
 function App() {
   return (
