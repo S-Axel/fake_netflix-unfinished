@@ -1,4 +1,4 @@
-import validate from './validation';
+import { validate } from './validation';
 
 const register = (formState) => (fieldName, options) => {
   const onChange = (e) => {

@@ -1,12 +1,13 @@
-import objectIsEmpty from '../../utils/objectIsEmpty';
 import isAFunction from '../../utils/isAFunction';
+import { validateAll } from './validation';
 
 const handleSubmit = (formState) => (onSubmit, onError) => (e) => {
   e.preventDefault();
-  if (isAFunction(onSubmit) && objectIsEmpty(formState.errors)) {
+  const allValid = validateAll(formState);
+  if (isAFunction(onSubmit) && allValid) {
     onSubmit(formState.fields, e);
   } else if (isAFunction(onError)) {
-    onError(formState.errors);
+    onError();
   }
 };
 
