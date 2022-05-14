@@ -1,42 +1,24 @@
-import objectHasProperty from '../../utils/objectHasProperty';
 import validate from './validation';
 
-const getRegister = (data, setData) => {
+const getRegister = (formState) => {
   const register = (fieldName, options) => {
     const onChange = (e) => {
       const newValue = e.target.value;
 
-      setData((prevData) => ({
-        ...prevData,
-        fields: {
-          ...prevData.fields,
-          [fieldName]: {
-            ...prevData.fields[fieldName],
-            value: newValue,
-          },
-        },
-      }));
+      formState.setFieldValue(fieldName, newValue);
 
-      if (data.fields[fieldName]?.validate) {
-        validate(newValue, data.fields[fieldName].validate, fieldName, setData);
-      }
+      validate(formState, fieldName, newValue);
     };
 
     // At first run, add the new field to the fields state object
-    if (!objectHasProperty(data.fields, fieldName)) {
-      setData((prevData) => ({
-        ...prevData,
-        fields: {
-          ...prevData.fields,
-          [fieldName]: { value: '', ...options },
-        },
-      }));
+    if (!formState.getField(fieldName)) {
+      formState.setField(fieldName, '', options);
     }
 
     return {
       name: fieldName,
       id: fieldName,
-      value: data?.fields[fieldName]?.value,
+      value: formState.getFieldValue(fieldName),
       onChange,
     };
   };

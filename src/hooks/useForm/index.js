@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import getRegister from './register';
 import getHandleSubmit from './handleSubmit';
+import getFormState from './formState';
 
 const useForm = () => {
-  const [data, setData] = useState({ fields: {}, errors: {} });
+  const [state, setState] = useState({ fields: {}, errors: {} });
+  const formState = getFormState(state, setState);
 
   return {
-    register: getRegister(data, setData),
-    handleSubmit: getHandleSubmit(data),
-    formState: { errors: data.errors },
+    register: getRegister(formState),
+    handleSubmit: getHandleSubmit(formState),
+    formState: { errors: formState.errors },
   };
 };
 

@@ -1,29 +1,11 @@
-const addError = (fieldName, setData, error) => {
-  setData((prevData) => (
-    {
-      ...prevData,
-      errors: {
-        ...prevData.errors,
-        [fieldName]: error,
-      },
-    }
-  ));
-};
-
-const clearError = (fieldName, setData) => {
-  setData((prevData) => {
-    const newData = { ...prevData };
-    delete newData.errors[fieldName];
-    return newData;
-  });
-};
-
-const validate = (value, validationFn, fieldName, setData) => {
-  const result = validationFn(value);
+const validate = (formState, fieldName, newValue) => {
+  const validationFn = formState.getField(fieldName)?.options?.validate;
+  if (!validationFn) { return; }
+  const result = validationFn(newValue);
   if (result === true) {
-    clearError(fieldName, setData);
+    formState.clearError(fieldName);
   } else if (typeof result === 'string') {
-    addError(fieldName, setData, result);
+    formState.setError(fieldName, result);
   }
 };
 
