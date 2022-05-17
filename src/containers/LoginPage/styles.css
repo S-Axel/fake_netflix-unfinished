@@ -4,6 +4,8 @@
     position: relative;
     z-index: 0;
     --header-height: 6rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .background {
@@ -36,10 +38,8 @@
 
 .login-form__container {
     padding-top: var(--header-height);
-    min-height: 100%;
+    flex-grow: 1;
 }
-
-
 
 @media (min-width: 440px) {
     .header__logo {

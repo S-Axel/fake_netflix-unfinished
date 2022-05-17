@@ -21,7 +21,7 @@
 
 @media (min-width: 740px) {
     .login-form {
-        padding: 60px 68px 40px 68px;
-        background-color: rgba(0, 0, 0, 0.75);
+        padding: 60px 68px 120px 68px;
+        background-color: var(--background-transparent);
     }
 }

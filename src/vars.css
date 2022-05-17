@@ -6,4 +6,5 @@
     --color-grey: #8c8c8c;
     --color-grey-dark: #454545;
     --color-grey-darkk: #333;
+    --background-transparent: rgba(0, 0, 0, 0.75);
 }

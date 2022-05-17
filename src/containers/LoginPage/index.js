@@ -2,6 +2,7 @@ import './styles.css';
 import LogoNetflix from '../../components/LogoNetflix';
 import backgroundImg from '../../assets/images/logged_out_background.jpg';
 import LoginForm from './LoginForm';
+import Footer from '../../components/Footer';
 
 function LoginPage() {
   return (
@@ -15,6 +16,7 @@ function LoginPage() {
       <main className="login-form__container">
         <LoginForm />
       </main>
+      <Footer className="login-page__footer" />
     </div>
   );
 }
