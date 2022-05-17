@@ -5,6 +5,8 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 /**
+ * Page footer
+ *
  * @component
  */
 function Footer({ className, ...rest }) {
