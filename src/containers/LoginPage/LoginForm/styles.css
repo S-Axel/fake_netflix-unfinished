@@ -19,7 +19,7 @@
     margin-top: 1.5rem;
 }
 
-@media screen and (min-width: 740px) {
+@media (min-width: 740px) {
     .login-form {
         padding: 60px 68px 40px 68px;
         background-color: rgba(0, 0, 0, 0.75);

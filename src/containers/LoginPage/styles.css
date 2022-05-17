@@ -41,13 +41,13 @@
 
 
 
-@media screen and (min-width: 440px) {
+@media (min-width: 440px) {
     .header__logo {
         height: 2.8rem;
     }
 }
 
-@media screen and (min-width: 740px) {
+@media (min-width: 740px) {
     .background {
         opacity: 0.5;
     }
