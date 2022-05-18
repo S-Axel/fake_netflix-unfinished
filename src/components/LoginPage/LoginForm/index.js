@@ -20,7 +20,7 @@ function LoginForm({ className }) {
   const onSubmit = () => {};
 
   return (
-    <div className={rootClassNames}>
+    <main className={rootClassNames}>
       <h1 className="rc-login-form__title">Sign In</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <TextField
@@ -43,7 +43,7 @@ function LoginForm({ className }) {
           Sign In
         </Button>
       </form>
-    </div>
+    </main>
   );
 }
 

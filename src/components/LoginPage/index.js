@@ -9,11 +9,11 @@ function LoginPage() {
   return (
     <div className="login-page">
       <BackgroundAsImage src={backgroundImg} />
-      <Header className="login-page__header" />
-      <main className="login-page__form-container">
-        <LoginForm />
-      </main>
-      <Footer />
+      <div className="login-page__content">
+        <Header />
+        <LoginForm className="login-page__form" />
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -1,28 +1,15 @@
 .login-page {
-    --header-height: 6rem;
-}
-
-.login-page {
     background-color: var(--color-black);
-    min-height: 100vh;
     position: relative;
     z-index: 0;
+}
+
+.login-page__content {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.login-page__header {
-    height: var(--header-height);
-}
-
-.login-page__form-container {
-    padding-top: var(--header-height);
+.login-page__form {
     flex-grow: 1;
-}
-
-@media (min-width: 740px) {
-    .login-page__form-container {
-        width: 450px;
-        margin: 0 auto;
-    }
 }
