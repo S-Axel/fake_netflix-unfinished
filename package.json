@@ -17,7 +17,8 @@
   },
   "devDependencies": {
     "better-docs": "^2.7.2",
-    "jsdoc": "^3.6.10"
+    "jsdoc": "^3.6.10",
+    "parcel-bundler": "^1.12.5"
   },
   "scripts": {
     "start": "react-scripts start",
