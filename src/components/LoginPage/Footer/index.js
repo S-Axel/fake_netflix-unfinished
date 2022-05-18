@@ -10,7 +10,7 @@ import './styles.css';
  * @component
  */
 function Footer({ className, ...rest }) {
-  const rootClassNames = classNames('rc-footer', className);
+  const rootClassNames = classNames('footer', className);
 
   return (
     <footer

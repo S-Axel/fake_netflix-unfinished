@@ -11,14 +11,14 @@ import LogoNetflix from '../../LogoNetflix';
  * @component
  */
 function Header({ className, ...rest }) {
-  const rootClassNames = classNames('rc-header', className);
+  const rootClassNames = classNames('header', className);
 
   return (
     <header
       className={rootClassNames}
       {...rest}
     >
-      <LogoNetflix className="rc-header__logo" />
+      <LogoNetflix className="header__logo" />
     </header>
   );
 }

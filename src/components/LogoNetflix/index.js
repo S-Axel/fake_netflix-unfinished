@@ -6,14 +6,14 @@ import './styles.css';
 import { Link } from 'react-router-dom';
 
 function LogoNetflix({ className, ...rest }) {
-  const rootClassNames = classNames('rc-logo-netflix', className);
+  const rootClassNames = classNames('logo-netflix', className);
   return (
     <Link className={rootClassNames} to="/">
       <svg
         viewBox="0 0 111 30"
         focusable="true"
         aria-label="netflix"
-        className="rc-logo-netflix__svg"
+        className="logo-netflix__svg"
         {...rest}
       >
         <g aria-hidden="true">

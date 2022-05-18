@@ -1,15 +1,15 @@
-.rc-text-field {
+.text-field {
     position: relative;
     width: 100%;
     --text-field-height: 3rem;
     --input-padding-x: 1.25rem;
 }
 
-.rc-text-field__input-container {
+.text-field__input-container {
     position: relative;
 }
 
-.rc-text-field__label {
+.text-field__label {
     display: block;
     position: absolute;
     color: var(--color-grey);
@@ -21,7 +21,7 @@
     transition-duration: 0.1s;
 }
 
-.rc-text-field__input {
+.text-field__input {
     box-sizing: border-box;
     width: 100%;
     height: var(--text-field-height);
@@ -34,23 +34,23 @@
     border: none;
 }
 
-.rc-text-field__input:focus {
+.text-field__input:focus {
     outline: none;
     background-color: var(--color-grey-dark);
 }
 
-.rc-text-field__input:focus + .rc-text-field__label,
-.rc-text-field--has-content .rc-text-field__label {
+.text-field__input:focus + .text-field__label,
+.text-field--has-content .text-field__label {
     font-size: 0.7rem;
     top: 0.3rem;
     transform: translateY(0);
 }
 
-.rc-text-field--error .rc-text-field__input {
+.text-field--error .text-field__input {
     border-bottom: 2px solid var(--color-warning);
 }
 
-.rc-text-field__error {
+.text-field__error {
     margin: 0;
     padding: 6px 3px;
     color: var(--color-warning);

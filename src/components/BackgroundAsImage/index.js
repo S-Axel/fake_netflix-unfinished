@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 function BackgroundAsImage({ className, src, ...rest }) {
-  const rootClassNames = classNames('rc-background', className);
+  const rootClassNames = classNames('background', className);
 
   return (
     <div
@@ -13,7 +13,7 @@ function BackgroundAsImage({ className, src, ...rest }) {
       aria-hidden="true"
       {...rest}
     >
-      <img className="rc-background__img" src={src} alt="background" />
+      <img className="background__img" src={src} alt="background" />
     </div>
   );
 }

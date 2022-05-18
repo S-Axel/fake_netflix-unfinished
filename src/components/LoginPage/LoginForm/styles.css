@@ -1,4 +1,4 @@
-.rc-login-form {
+.login-form {
     color: var(--color-white);
     background-color: var(--color-black);
     box-sizing: border-box;
@@ -6,20 +6,20 @@
     padding: 0 3%;
 }
 
-.rc-login-form__title {
+.login-form__title {
     margin: 0 0 1.67rem;
 }
 
-.rc-login-form__text-field {
+.login-form__text-field {
     margin-bottom: 1rem;
 }
 
-.rc-login-form__button {
+.login-form__button {
     margin-top: 1.5rem;
 }
 
 @media (min-width: 740px) {
-    .rc-login-form {
+    .login-form {
         padding: 60px 68px 80px 68px;
         background-color: var(--background-transparent);
         width: 450px;

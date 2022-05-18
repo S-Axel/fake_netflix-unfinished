@@ -1,4 +1,4 @@
-.rc-background {
+.background {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -7,13 +7,13 @@
     z-index: -1;
 }
 
-.rc-background__img {
+.background__img {
     min-height: 100%;
     min-width: 100%;
 }
 
 @media (min-width: 740px) {
-    .rc-background {
+    .background {
         opacity: 0.5;
     }
 }

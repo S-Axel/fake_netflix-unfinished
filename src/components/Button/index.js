@@ -11,7 +11,7 @@ import './styles.css';
  * @component
  */
 function Button({ className, type, children, ...rest }) {
-  const rootClassNames = classNames('rc-button', className);
+  const rootClassNames = classNames('button', className);
 
   return (
     <button
