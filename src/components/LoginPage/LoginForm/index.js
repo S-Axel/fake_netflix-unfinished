@@ -2,10 +2,10 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import './styles.css';
-import TextField from '../TextField';
-import Button from '../Button';
-import useForm from '../../hooks/useForm';
-import { validateEmailOrPhone, validatePassword } from '../../validators';
+import TextField from '../../TextField';
+import Button from '../../Button';
+import useForm from '../../../hooks/useForm';
+import { validateEmailOrPhone, validatePassword } from '../../../validators';
 
 /**
  * Login form

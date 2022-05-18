@@ -27,5 +27,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # default CRA files
-/src/containers/App/App.test.js
+/src/components/App/App.test.js
 /src/setupTests.js

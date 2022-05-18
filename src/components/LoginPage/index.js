@@ -1,9 +1,9 @@
 import './styles.css';
 import backgroundImg from '../../assets/images/logged_out_background.jpg';
-import LoginForm from '../../components/LoginForm';
-import Footer from '../../components/Footer';
-import Header from '../../components/Header';
-import BackgroundAsImage from '../../components/BackgroundAsImage';
+import LoginForm from './LoginForm';
+import Footer from './Footer';
+import Header from './Header';
+import BackgroundAsImage from '../BackgroundAsImage';
 
 function LoginPage() {
   return (
