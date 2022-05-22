@@ -12,12 +12,17 @@ import { validateEmailOrPhone, validatePassword } from '../../../validators';
  *
  * @component
  */
-function LoginForm({ className }) {
+function LoginForm({ className, submit }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const rootClassNames = classNames('login-form', className);
 
-  const onSubmit = () => {};
+  const onSubmit = (formData) => {
+    submit({
+      email: formData.emailOrPhone.value,
+      password: formData.password.value,
+    });
+  };
 
   return (
     <main className={rootClassNames}>
@@ -49,6 +54,10 @@ function LoginForm({ className }) {
 
 LoginForm.propTypes = {
   className: PropTypes.string,
+  /**
+   * Called on form submit: submit({email: string, password: string})
+   */
+  submit: PropTypes.func.isRequired,
 };
 
 LoginForm.defaultProps = {
