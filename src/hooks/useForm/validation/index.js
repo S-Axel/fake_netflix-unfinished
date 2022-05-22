@@ -12,7 +12,7 @@ const validate = (formState, fieldName, newValue) => {
 
 const validateAll = (formState) => {
   const allValid = Object.keys(formState.fields).reduce((prevAreValid, fieldName) => (
-    !!(validate(formState, fieldName, formState.getFieldValue(fieldName)) && prevAreValid)
+    !!(validate(formState, fieldName, formState.getFieldValue(fieldName)) === true && prevAreValid)
   ), true);
   return allValid;
 };
