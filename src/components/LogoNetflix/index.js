@@ -9,6 +9,7 @@ function LogoNetflix({ className, ...rest }) {
   const rootClassNames = classNames('logo-netflix', className);
   return (
     <Link className={rootClassNames} to="/">
+      <span className="logo-netflix__prefix">NOT</span>
       <svg
         viewBox="0 0 111 30"
         focusable="true"

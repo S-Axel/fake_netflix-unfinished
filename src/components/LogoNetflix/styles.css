@@ -1,5 +1,14 @@
 .logo-netflix {
     display: flex;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.logo-netflix__prefix {
+    display: flex;
+    color: var(--color-grey-light);
+    align-items: center;
+    padding-right: 0.5em;
 }
 
 .logo-netflix__svg {

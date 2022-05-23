@@ -13,5 +13,6 @@
 @media (min-width: 440px) {
     .header__logo {
         height: 2.8rem;
+        font-size: 2em;
     }
 }
