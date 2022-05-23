@@ -6,6 +6,7 @@ import TextField from '../../TextField';
 import Button from '../../Button';
 import useForm from '../../../hooks/useForm';
 import { validateEmailOrPhone, validatePassword } from '../../../validators';
+import Alert from '../../Alert';
 
 /**
  * Login form
@@ -28,6 +29,12 @@ function LoginForm({ className, submit }) {
     <main className={rootClassNames}>
       <h1 className="login-form__title">Sign In</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
+        <Alert className="login-form__warning">
+          This is NOT the Netflix website.
+        </Alert>
+        <Alert className="login-form__warning">
+          Do NOT enter your Netflix credentials.
+        </Alert>
         <TextField
           className="login-form__text-field"
           label="Email or phone number"

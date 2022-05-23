@@ -1,0 +1,15 @@
+.alert {
+    padding: 0.6rem;
+    font-size: 0.9em;
+}
+.alert__icon {
+    padding-right: 0.5rem;
+}
+
+.alert--warning {
+    color: var(--color-warning-foreground);
+    background-color: var(--color-warning-background);
+}
+.alert--warning .alert__icon {
+    color: var(--color-warning);
+}
