@@ -16,6 +16,8 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "realm-web": "^1.7.0",
+    "stream": "^0.0.2",
+    "crypto-browserify": "^3.12.0",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
@@ -25,6 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "chmod +x ./fix_crypto_dependency.sh; ./fix_crypto_dependency.sh",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
