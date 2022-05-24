@@ -13,7 +13,7 @@ import Alert from '../../Alert';
  *
  * @component
  */
-function LoginForm({ className, submit }) {
+function LoginForm({ className, submit, submitButtonSpinning }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const rootClassNames = classNames('login-form', className);
@@ -51,6 +51,7 @@ function LoginForm({ className, submit }) {
         <Button
           className="login-form__button"
           type="submit"
+          loading={submitButtonSpinning}
         >
           Sign In
         </Button>
@@ -65,10 +66,15 @@ LoginForm.propTypes = {
    * Called on form submit: submit({email: string, password: string})
    */
   submit: PropTypes.func.isRequired,
+  /**
+   * Add a spinner inside the submit button
+   */
+  submitButtonSpinning: PropTypes.bool,
 };
 
 LoginForm.defaultProps = {
   className: '',
+  submitButtonSpinning: false,
 };
 
 export default LoginForm;
