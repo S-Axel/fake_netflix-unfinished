@@ -1,12 +1,14 @@
-import * as Realm from 'realm-web';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+
 import LoginForm from '../../components/LoginPage/LoginForm';
+import { apiLogin } from '../../slices/userSlice';
 
 function LoginFormContainer({ className }) {
+  const dispatch = useDispatch();
+
   const submitHandler = async (formData) => {
-    const app = new Realm.App({ id: 'fake-netflix-vwzwz' });
-    const credentials = Realm.Credentials.emailPassword(formData.email, formData.password);
-    await app.logIn(credentials);
+    dispatch(apiLogin(formData));
   };
 
   return (
