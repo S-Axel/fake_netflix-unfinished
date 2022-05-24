@@ -1,7 +1,7 @@
 import * as Realm from 'realm-web';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const apiLogin = createAsyncThunk(
+const actionApiLogin = createAsyncThunk(
   'user/apiLogin',
   async (arg, thunkAPI) => {
     const credentials = Realm.Credentials.emailPassword(arg.email, arg.password);
@@ -20,14 +20,14 @@ const counterSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(apiLogin.pending, (state, action) => {
+      .addCase(actionApiLogin.pending, (state, action) => {
         console.log('apiLogin/pending/action: ', action);
         return {
           ...state,
           loading: true,
         };
       })
-      .addCase(apiLogin.fulfilled, (state, action) => {
+      .addCase(actionApiLogin.fulfilled, (state, action) => {
         console.log('apiLogin/fulfilled/action: ', action);
         return {
           ...state,
@@ -35,7 +35,7 @@ const counterSlice = createSlice({
           loading: false,
         };
       })
-      .addCase(apiLogin.rejected, (state, action) => {
+      .addCase(actionApiLogin.rejected, (state, action) => {
         console.log('apiLogin/rejected/action: ', action);
         return {
           ...state,
@@ -45,6 +45,6 @@ const counterSlice = createSlice({
   },
 });
 
-export { apiLogin };
+export { actionApiLogin };
 
 export default counterSlice.reducer;
