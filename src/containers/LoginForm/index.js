@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import LoginForm from '../../components/LoginPage/LoginForm';
 import { thunkApiLogin } from '../../middlewares/thunkMiddleware';
+import { selectLoading } from '../../selectors/userSelectors';
 
 function LoginFormContainer({ className }) {
   const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.user.loading);
+  const isLoading = useSelector(selectLoading);
 
   const submitHandler = async (formData) => {
     dispatch(thunkApiLogin(formData));
