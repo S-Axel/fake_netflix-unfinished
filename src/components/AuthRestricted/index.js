@@ -14,18 +14,18 @@ import { selectConnected } from '../../selectors/userSelectors';
 function AuthRestricted({ type, element }) {
   const isConnected = useSelector(selectConnected);
   if (type === 'guest' && isConnected) return <Navigate to="/browse" />;
-  if (type === 'restricted' && !isConnected) return <Navigate to="/login" />;
+  if (type === 'connected' && !isConnected) return <Navigate to="/login" />;
 
   return element;
 }
 
 AuthRestricted.propTypes = {
   /**
-   * One of [guest | restricted].
+   * One of [guest | connected].
    * 'guest' is for non authenticated users.
-   * 'restricted' is for authenticated users.
+   * 'connected' is for authenticated users.
    */
-  type: PropTypes.oneOf(['guest', 'restricted']).isRequired,
+  type: PropTypes.oneOf(['guest', 'connected']).isRequired,
   /**
    * Element whose access is restricted
    */

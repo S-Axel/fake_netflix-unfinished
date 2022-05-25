@@ -13,7 +13,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/login" element={<AuthRestricted type="guest" element={<LoginPage />} />} />
-            <Route path="/browse" element={<AuthRestricted type="restricted" element={<BrowsePage />} />} />
+            <Route path="/browse" element={<AuthRestricted type="connected" element={<BrowsePage />} />} />
             <Route path="/*" element={<Navigate to="/login" />} />
           </Routes>
         </BrowserRouter>
