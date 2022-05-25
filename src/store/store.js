@@ -1,19 +1,16 @@
 import { configureStore } from '@reduxjs/toolkit';
-import * as Realm from 'realm-web';
-import userSlice from '../slices/userSlice';
+import userReducer from '../reducers/userReducer';
 
 const reducers = {
-  user: userSlice,
+  user: userReducer,
 };
 
 const store = configureStore({
   reducer: reducers,
   middleware: (getDefaultMiddleware) => getDefaultMiddleware({
-    thunk: {
-      extraArgument: {
-        realmApp: new Realm.App({ id: 'fake-netflix-vwzwz' }),
-      },
-    },
+    thunk: true,
+    immutableCheck: true,
+    serializableCheck: true,
   }),
   devTools: process.env.NODE_ENV !== 'production',
 });
