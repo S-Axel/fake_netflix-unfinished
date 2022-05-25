@@ -7,6 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 
 /**
+ * @category Components
+ * @subcategory Global
+ *
  * @component
  */
 function Alert({ className, severity, children, ...rest }) {

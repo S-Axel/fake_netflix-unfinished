@@ -5,6 +5,12 @@ import Footer from './Footer';
 import Header from './Header';
 import BackgroundAsImage from '../BackgroundAsImage';
 
+/**
+ * @category Components
+ * @subcategory Pages
+ *
+ * @component
+ */
 function LoginPage() {
   return (
     <div className="login-page">

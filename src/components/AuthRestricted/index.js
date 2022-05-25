@@ -7,7 +7,10 @@ import { useSelector } from 'react-redux';
 import { selectConnected } from '../../selectors/userSelectors';
 
 /**
- * Display element property if authentification status is right. Redirect otherwise.
+ * Display 'element' property if auth status is right. Redirect otherwise.
+ *
+ * @category Components
+ * @subcategory Global
  *
  * @component
  */

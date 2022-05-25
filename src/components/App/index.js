@@ -6,6 +6,14 @@ import LoginPage from '../LoginPage';
 import BrowsePage from '../BrowsePage';
 import AuthRestricted from '../AuthRestricted';
 
+/**
+ * Root of the application
+ *
+ * @category Components
+ * @subcategory Global
+ *
+ * @component
+ */
 function App() {
   return (
     <div>

@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 
+/**
+ * @category Components
+ * @subcategory Global
+ *
+ * @component
+ */
 function BackgroundAsImage({ className, src, ...rest }) {
   const rootClassNames = classNames('background', className);
 

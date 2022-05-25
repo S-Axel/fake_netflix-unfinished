@@ -11,6 +11,9 @@ import Alert from '../../Alert';
 /**
  * Login form
  *
+ * @category Components
+ * @subcategory Global
+ *
  * @component
  */
 function LoginForm({ className, submit, submitButtonSpinning }) {

@@ -7,6 +7,9 @@ import './styles.css';
 /**
  * Page footer
  *
+ * @category Components
+ * @subcategory Global
+ *
  * @component
  */
 function Footer({ className, ...rest }) {

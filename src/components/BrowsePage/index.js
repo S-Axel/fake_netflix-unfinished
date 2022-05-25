@@ -5,6 +5,9 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 /**
+ * @category Components
+ * @subcategory Pages
+ *
  * @component
  */
 function BrowsePage({ className, ...rest }) {

@@ -4,6 +4,12 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 
+/**
+ * @category Components
+ * @subcategory Global
+ *
+ * @component
+ */
 function TextField({
   className,
   label,
@@ -47,15 +53,36 @@ function TextField({
 
 TextField.propTypes = {
   className: PropTypes.string,
+  /**
+   * Label displayed inside the input
+   */
   label: PropTypes.string.isRequired,
+  /**
+   * 'name' input attribute
+   */
   name: PropTypes.string.isRequired,
+  /**
+   * 'id' attribute to link the input and the label
+   */
   id: PropTypes.string.isRequired,
+  /**
+   * Value displayed inside the input
+   */
   value: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
   ]).isRequired,
+  /**
+   * Callback for onChange event
+   */
   onChange: PropTypes.func.isRequired,
+  /**
+   * Will display the error below the input
+   */
   error: PropTypes.string,
+  /**
+   * 'type' input attribute
+   */
   type: PropTypes.string,
 };
 

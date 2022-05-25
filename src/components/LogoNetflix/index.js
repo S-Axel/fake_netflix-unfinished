@@ -5,6 +5,12 @@ import PropTypes from 'prop-types';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
+/**
+ * @category Components
+ * @subcategory Global
+ *
+ * @component
+ */
 function LogoNetflix({ className, ...rest }) {
   const rootClassNames = classNames('logo-netflix', className);
   return (

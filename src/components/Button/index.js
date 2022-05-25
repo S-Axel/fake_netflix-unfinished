@@ -9,6 +9,9 @@ import Spinner from '../Spinner';
 /**
  * A simple button component
  *
+ * @category Components
+ * @subcategory Global
+ *
  * @component
  */
 function Button({ className, type, loading, children, ...rest }) {

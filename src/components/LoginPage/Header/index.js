@@ -8,6 +8,9 @@ import LogoNetflix from '../../LogoNetflix';
 /**
  * Page header
  *
+ * @category Components
+ * @subcategory Global
+ *
  * @component
  */
 function Header({ className, ...rest }) {

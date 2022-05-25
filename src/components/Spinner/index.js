@@ -7,6 +7,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './styles.css';
 
 /**
+ * @category Components
+ * @subcategory Global
+ *
  * @component
  */
 function Spinner({ className, ...rest }) {
