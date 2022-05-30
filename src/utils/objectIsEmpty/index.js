@@ -1,11 +1,14 @@
+/**
+ * Test if argument is an empty object
+ * returns false if it is null or not an object
+ * @param {Object} object
+ * @returns {boolean}
+ */
 function objectIsEmpty(object) {
-  if (typeof object !== 'object') {
+  if (typeof object !== 'object' || object === null) {
     return false;
   }
-  if (!object.keys) {
-    return true;
-  }
-  return (object?.keys?.length === 0);
+  return (Object.keys(object).length === 0);
 }
 
 export default objectIsEmpty;
