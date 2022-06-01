@@ -4,7 +4,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 import store from '../../store/store';
 import LoginPage from '../LoginPage';
 import BrowsePage from '../BrowsePage';
-import AuthRestricted from '../AuthRestricted';
+import AuthRestricted from '../../containers/AuthRestricted';
 
 /**
  * Root of the application
