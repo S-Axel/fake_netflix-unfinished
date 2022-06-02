@@ -2,7 +2,6 @@ import { memo } from 'react';
 import PropTypes from 'prop-types';
 import { Navigate } from 'react-router-dom';
 
-import './styles.css';
 import { useSelector } from 'react-redux';
 import { selectConnected } from '../../selectors/userSelectors';
 

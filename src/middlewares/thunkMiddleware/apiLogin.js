@@ -2,6 +2,7 @@ import postLogin from '../../apis/realm/postLogin';
 import { WRONG_CREDENTIALS } from '../../constants/errorMessages';
 
 /**
+ * Redux thunk payload creator
  * Try login the user on server and handle errors
  * @param {Object} arg
  * @param {string} arg.email

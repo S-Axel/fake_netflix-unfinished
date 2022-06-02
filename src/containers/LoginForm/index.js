@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 
 import LoginForm from '../../components/LoginPage/LoginForm';
-import { thunkApiLogin } from '../../middlewares/thunkMiddleware';
+import actionApiLogin from '../../actions/user/actionApiLogin';
 import { selectLoading } from '../../selectors/userSelectors';
 
 function LoginFormContainer({ className }) {
@@ -10,7 +10,7 @@ function LoginFormContainer({ className }) {
   const isLoading = useSelector(selectLoading);
 
   const submitHandler = async (formData) => {
-    dispatch(thunkApiLogin(formData));
+    dispatch(actionApiLogin(formData));
   };
 
   return (

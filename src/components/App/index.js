@@ -5,6 +5,7 @@ import store from '../../store/store';
 import LoginPage from '../LoginPage';
 import BrowsePage from '../BrowsePage';
 import AuthRestricted from '../../containers/AuthRestricted';
+import AuthInit from '../../containers/AuthInit';
 
 /**
  * Root of the application
@@ -19,6 +20,7 @@ function App() {
     <div>
       <ReduxProvider store={store}>
         <BrowserRouter>
+          <AuthInit />
           <Routes>
             <Route path="/login" element={<AuthRestricted type="guest" element={<LoginPage />} />} />
             <Route path="/browse" element={<AuthRestricted type="connected" element={<BrowsePage />} />} />

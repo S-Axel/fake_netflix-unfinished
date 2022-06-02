@@ -1,23 +1,33 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { thunkApiLogin } from '../middlewares/thunkMiddleware';
+import actionLogin from '../actions/user/actionLogin';
+import actionApiLogin from '../actions/user/actionApiLogin';
 
-const initialState = {};
+const initialState = {
+  loading: false,
+  connected: false,
+};
 
 const userReducer = createReducer(initialState, (builder) => {
   builder
-    .addCase(thunkApiLogin.pending, (state) => ({
+    .addCase(actionApiLogin.pending, (state) => ({
       ...state,
       loading: true,
     }))
-    .addCase(thunkApiLogin.fulfilled, (state) => ({
+    .addCase(actionApiLogin.fulfilled, (state) => ({
       ...state,
       loading: false,
       connected: true,
     }))
-    .addCase(thunkApiLogin.rejected, (state) => ({
+    .addCase(actionApiLogin.rejected, (state) => ({
       ...state,
       loading: false,
+    }))
+    .addCase(actionLogin, (state) => ({
+      ...state,
+      connected: true,
     }));
 });
 
 export default userReducer;
+
+export { actionLogin };
