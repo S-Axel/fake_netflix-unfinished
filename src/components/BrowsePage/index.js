@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import backgroundImg from '../../assets/images/love_death_+_robot.webp';
 
 import './styles.css';
+import BrowseHeader from './BrowseHeader';
 
 /**
  * @category Components
@@ -17,6 +18,7 @@ function BrowsePage({ className, ...rest }) {
       className={classNames(className)}
       {...rest}
     >
+      <BrowseHeader />
       <img src={backgroundImg} alt="background" style={{ width: '100%' }} />
     </div>
   );

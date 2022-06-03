@@ -1,8 +1,8 @@
 import './styles.css';
 import backgroundImg from '../../assets/images/logged_out_background.jpg';
 import LoginFormContainer from '../../containers/LoginForm';
-import Footer from './Footer';
-import Header from './Header';
+import LoginFooter from './LoginFooter';
+import LoginHeader from './LoginHeader';
 import BackgroundAsImage from '../BackgroundAsImage';
 
 /**
@@ -16,9 +16,9 @@ function LoginPage() {
     <div className="login-page">
       <BackgroundAsImage src={backgroundImg} />
       <div className="login-page__content">
-        <Header />
+        <LoginHeader />
         <LoginFormContainer className="login-page__form" />
-        <Footer />
+        <LoginFooter />
       </div>
     </div>
   );

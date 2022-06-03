@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 import './styles.css';
 
 /**
- * Page footer
+ * Login page footer
  *
  * @category Components
  * @subcategory Global
  *
  * @component
  */
-function Footer({ className, ...rest }) {
+function LoginFooter({ className, ...rest }) {
   const rootClassNames = classNames('footer', className);
 
   return (
@@ -23,12 +23,12 @@ function Footer({ className, ...rest }) {
   );
 }
 
-Footer.propTypes = {
+LoginFooter.propTypes = {
   className: PropTypes.string,
 };
 
-Footer.defaultProps = {
+LoginFooter.defaultProps = {
   className: '',
 };
 
-export default memo(Footer);
+export default memo(LoginFooter);

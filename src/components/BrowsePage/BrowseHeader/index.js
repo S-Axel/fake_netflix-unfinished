@@ -6,32 +6,30 @@ import './styles.css';
 import LogoNetflix from '../../LogoNetflix';
 
 /**
- * Page header
+ * Browse page header
  *
  * @category Components
  * @subcategory Global
  *
  * @component
  */
-function Header({ className, ...rest }) {
-  const rootClassNames = classNames('header', className);
-
+function BrowseHeader({ className, ...rest }) {
   return (
     <header
-      className={rootClassNames}
+      className={classNames('browse-header', className)}
       {...rest}
     >
-      <LogoNetflix className="header__logo" />
+      <LogoNetflix className="browse-header__logo" />
     </header>
   );
 }
 
-Header.propTypes = {
+BrowseHeader.propTypes = {
   className: PropTypes.string,
 };
 
-Header.defaultProps = {
+BrowseHeader.defaultProps = {
   className: '',
 };
 
-export default memo(Header);
+export default memo(BrowseHeader);
