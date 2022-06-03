@@ -18,7 +18,6 @@ function LogoNetflix({ className, ...rest }) {
       <span className="logo-netflix__prefix">NOT</span>
       <svg
         viewBox="0 0 111 30"
-        focusable="true"
         aria-label="netflix"
         className="logo-netflix__svg"
         {...rest}
