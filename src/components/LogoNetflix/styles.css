@@ -7,7 +7,7 @@
 .logo-netflix__prefix {
     display: flex;
     color: var(--color-grey-light);
-    align-items: center;
+    align-items: flex-end;
     padding-right: 0.5em;
 }
 
