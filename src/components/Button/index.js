@@ -14,10 +14,18 @@ import Spinner from '../Spinner';
  *
  * @component
  */
-function Button({ className, type, loading, children, ...rest }) {
+function Button({ className, type, variant, color, loading, children, ...rest }) {
+  const classnames = classNames(
+    'button',
+    `button--${variant}`,
+    `button--${color}`,
+    { 'button--loading': loading },
+    className,
+  );
+
   return (
     <button
-      className={classNames('button', { 'button--loading': loading }, className)}
+      className={classnames}
       type={type}
       {...rest}
     >
@@ -33,6 +41,14 @@ Button.propTypes = {
    */
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   /**
+   * The variant to use, one of [ 'contained' | 'text' ]
+   */
+  variant: PropTypes.oneOf(['contained', 'text']),
+  /**
+   * The color to use, one of [ 'primary' | 'secondary' ]
+   */
+  color: PropTypes.oneOf(['primary', 'secondary']),
+  /**
    * If true, the button looks like it is loading
    */
   loading: PropTypes.bool,
@@ -45,7 +61,9 @@ Button.propTypes = {
 Button.defaultProps = {
   className: '',
   type: 'button',
-  loading: 'false',
+  variant: 'contained',
+  color: 'primary',
+  loading: false,
   children: '',
 };
 

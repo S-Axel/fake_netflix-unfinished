@@ -43,7 +43,14 @@ function Dropdown({ className, buttonContent, align, children, ...rest }) {
       className={classNames('dropdown__container', className)}
       {...rest}
     >
-      <Button className="dropdown__button" onClick={toggleDropdown}>Browse</Button>
+      <Button
+        className="dropdown__button"
+        variant="text"
+        color="secondary"
+        onClick={toggleDropdown}
+      >
+        Browse
+      </Button>
       <Arrow
         className={classNames('dropdown__arrow', { 'dropdown__arrow--hidden': !dropdownOpen })}
         style={arrowAlignStyle[align]}
