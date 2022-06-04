@@ -1,0 +1,6 @@
+.arrow {
+    font-size: 1rem;
+    border-width: 0.5em;
+    border-style: solid;
+    border-color: transparent transparent var(--color-grey-light);
+}

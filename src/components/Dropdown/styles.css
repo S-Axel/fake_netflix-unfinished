@@ -1,0 +1,21 @@
+.dropdown__container {
+    position: relative;
+}
+
+.dropdown__button {}
+
+.dropdown__arrow {
+    position: absolute;
+}
+
+.dropdown__arrow--hidden {
+    display: none;
+}
+
+.dropdown__content {
+    position: absolute;
+}
+
+.dropdown__content--hidden {
+    display: none;
+}

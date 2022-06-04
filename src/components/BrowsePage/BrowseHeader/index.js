@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 import LogoNetflix from '../../LogoNetflix';
+import Dropdown from '../../Dropdown';
 
 /**
  * Browse page header
@@ -20,6 +21,15 @@ function BrowseHeader({ className, ...rest }) {
       {...rest}
     >
       <LogoNetflix className="browse-header__logo" />
+      <Dropdown buttonContent="Browse">
+        <ul style={{ width: '10rem' }}>
+          <li>Home</li>
+          <li>TV Shows</li>
+          <li>Movies</li>
+          <li>New & Popular</li>
+          <li>My List</li>
+        </ul>
+      </Dropdown>
     </header>
   );
 }
