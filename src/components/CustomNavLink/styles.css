@@ -1,0 +1,19 @@
+.custom-nav-link {
+    color: var(--color-grey-lightt);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.4s;
+}
+
+.custom-nav-link:hover {
+    color: var(--color-grey-light);
+}
+
+.custom-nav-link--active {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.custom-nav-link--active:hover {
+    color: var(--color-white);
+}
