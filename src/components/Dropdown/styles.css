@@ -6,6 +6,7 @@
 
 .dropdown__arrow {
     position: absolute;
+    display: block;
 }
 
 .dropdown__arrow--hidden {

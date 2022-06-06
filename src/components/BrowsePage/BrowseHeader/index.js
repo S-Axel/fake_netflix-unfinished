@@ -1,6 +1,8 @@
 import { memo } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './styles.css';
 import LogoNetflix from '../../LogoNetflix';
@@ -21,7 +23,16 @@ function BrowseHeader({ className, ...rest }) {
       {...rest}
     >
       <LogoNetflix className="browse-header__logo" />
-      <Dropdown buttonContent="Browse">
+      <Dropdown
+        className="browse-header__browse-dropdown"
+        buttonContent={(
+          <>
+            Browse
+            &nbsp;
+            <FontAwesomeIcon icon={faCaretDown} />
+          </>
+        )}
+      >
         <ul style={{ width: '10rem' }}>
           <li>Home</li>
           <li>TV Shows</li>

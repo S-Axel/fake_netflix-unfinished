@@ -1,10 +1,11 @@
 import { memo, useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './styles.css';
 import Button from '../Button';
-import Arrow from '../Arrow';
 import { BOTTOM_CENTER, BOTTOM_LEFT, BOTTOM_RIGHT } from '../../constants/alignPositions';
 import setRefPosition from '../../utils/setRefPosition';
 
@@ -49,11 +50,12 @@ function Dropdown({ className, buttonContent, align, children, ...rest }) {
         color="secondary"
         onClick={toggleDropdown}
       >
-        Browse
+        {buttonContent}
       </Button>
-      <Arrow
+      <FontAwesomeIcon
         className={classNames('dropdown__arrow', { 'dropdown__arrow--hidden': !dropdownOpen })}
         style={arrowAlignStyle[align]}
+        icon={faCaretUp}
       />
       <div ref={refDropContent} className={classNames('dropdown__content', { 'dropdown__content--hidden': !dropdownOpen })}>
         {children}
