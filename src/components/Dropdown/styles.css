@@ -7,6 +7,8 @@
 .dropdown__arrow {
     position: absolute;
     display: block;
+    font-size: 1.2rem;
+    color: var(--color-grey-lightt);
 }
 
 .dropdown__arrow--hidden {
@@ -15,6 +17,11 @@
 
 .dropdown__content {
     position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 2.55rem;
+    border-width: 2px 0 0 0;
+    border-color: var(--color-grey-lightt);
+    border-style: solid;
 }
 
 .dropdown__content--hidden {

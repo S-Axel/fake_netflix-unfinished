@@ -6,14 +6,17 @@ import './styles.css';
 import { NavLink } from 'react-router-dom';
 
 /**
- * Takes regular NavLink props, renders it with custom style.
+ * navigation link for PrimaryNavigation component.
+ * Dropdown version.
+ * Built on top of NavLink.
+ *
  * @component
  */
-function CustomNavLink({ className, to, children, ...rest }) {
+function PrimNavDropdownLink({ className, to, children, ...rest }) {
   const getClassNames = ({ isActive }) => classNames(
-    'custom-nav-link',
+    'prim-nav-dropdown-link',
     {
-      'custom-nav-link--active': isActive,
+      'prim-nav-dropdown-link--active': isActive,
     },
     className,
   );
@@ -29,20 +32,20 @@ function CustomNavLink({ className, to, children, ...rest }) {
   );
 }
 
-CustomNavLink.propTypes = {
+PrimNavDropdownLink.propTypes = {
   className: PropTypes.string,
   /**
-   * content of the link
+   * Content of the link
    */
   children: PropTypes.node.isRequired,
   /**
-   * NavLink prop: path to redirect
+   * Router path to redirect tu user on click
    */
   to: PropTypes.string.isRequired,
 };
 
-CustomNavLink.defaultProps = {
+PrimNavDropdownLink.defaultProps = {
   className: '',
 };
 
-export default memo(CustomNavLink);
+export default memo(PrimNavDropdownLink);

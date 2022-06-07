@@ -2,12 +2,29 @@
     display: flex;
 }
 
+.primary-navigation__dropdown {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.primary-navigation__dropdown-list-item {
+    font-size: 1.35em;
+}
+
+.primary-navigation__dropdown-list-item-link {
+    height: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .primary-navigation__flat {
     display: none;
     list-style-type: none;
     padding: 0;
     width: 100%;
-    font-size: 0.85rem;
+    font-size: 0.85em;
 }
 
 .primary-navigation__flat-list-item {
