@@ -21,6 +21,7 @@ function PrimaryNavigation({ className, ...rest }) {
     >
       <Dropdown
         className="primary-navigation__dropdown"
+        variant="primary"
         buttonContent={(
           <>
             Browse

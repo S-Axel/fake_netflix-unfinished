@@ -25,7 +25,7 @@ const arrowAlignStyle = {
 /**
  * @component
  */
-function Dropdown({ className, buttonContent, align, children, ...rest }) {
+function Dropdown({ className, buttonContent, align, variant, children, ...rest }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const refDropContainer = useRef(null);
   const refDropContent = useRef(null);
@@ -53,11 +53,11 @@ function Dropdown({ className, buttonContent, align, children, ...rest }) {
         {buttonContent}
       </Button>
       <FontAwesomeIcon
-        className={classNames('dropdown__arrow', { 'dropdown__arrow--hidden': !dropdownOpen })}
+        className={classNames('dropdown__arrow', `dropdown__arrow--${variant}`, { 'dropdown__arrow--hidden': !dropdownOpen })}
         style={arrowAlignStyle[align]}
         icon={faCaretUp}
       />
-      <div ref={refDropContent} className={classNames('dropdown__content', { 'dropdown__content--hidden': !dropdownOpen })}>
+      <div ref={refDropContent} className={classNames('dropdown__content', `dropdown__content--${variant}`, { 'dropdown__content--hidden': !dropdownOpen })}>
         {children}
       </div>
     </div>
@@ -74,6 +74,10 @@ Dropdown.propTypes = {
    * Position of the dropdown according the trigger button
    */
   align: PropTypes.oneOf([BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT]),
+  /**
+   * Variant of Dropdown, one of ['primary', 'secondary']
+   */
+  variant: PropTypes.oneOf(['primary', 'secondary']).isRequired,
   /**
    * Content of the opened dropdown
    */
