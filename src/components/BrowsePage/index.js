@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import backgroundImg from '../../assets/images/love_death_+_robot.webp';
+import backgroundImg from '../../assets/images/better_call_saul.webp';
 
 import './styles.css';
 import BrowseHeader from './BrowseHeader';
