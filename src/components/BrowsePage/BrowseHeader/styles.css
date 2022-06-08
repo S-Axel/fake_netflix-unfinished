@@ -18,6 +18,11 @@
     margin-left: 1.2rem;
 }
 
+.browse-header__secondary-navigation {
+    position: absolute;
+    right: 3%;
+}
+
 @media (min-width: 950px) {
     .browse-header {
         height: 4.25rem;

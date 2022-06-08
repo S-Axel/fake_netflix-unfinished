@@ -1,0 +1,19 @@
+.dropdown-trigger-button {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-trigger-button__picture {
+    border-radius: 4px;
+}
+
+.dropdown-trigger-button__caret {
+    display: none;
+    margin-left: 0.7rem;
+}
+
+@media (min-width: 950px) {
+    .dropdown-trigger-button__caret {
+        display: inline;
+    }
+}

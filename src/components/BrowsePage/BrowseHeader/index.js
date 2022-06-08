@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import './styles.css';
 import LogoNetflix from '../../LogoNetflix';
 import PrimaryNavigation from './PrimaryNavigation';
+import SecondaryNavigation from './SecondaryNavigation';
 
 /**
  * Browse page header
@@ -22,6 +23,7 @@ function BrowseHeader({ className, ...rest }) {
     >
       <LogoNetflix className="browse-header__logo" />
       <PrimaryNavigation className="browse-header__primary-navigation" />
+      <SecondaryNavigation className="browse-header__secondary-navigation" />
     </header>
   );
 }
