@@ -1,6 +1,7 @@
 import { createReducer } from '@reduxjs/toolkit';
 import actionLogin from '../actions/user/actionLogin';
 import actionApiLogin from '../actions/user/actionApiLogin';
+import actionApiLogout from '../actions/user/actionApiLogout';
 
 const initialState = {
   loading: false,
@@ -25,6 +26,10 @@ const userReducer = createReducer(initialState, (builder) => {
     .addCase(actionLogin, (state) => ({
       ...state,
       connected: true,
+    }))
+    .addCase(actionApiLogout.fulfilled, (state) => ({
+      ...state,
+      connected: false,
     }));
 });
 
