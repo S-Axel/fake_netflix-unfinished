@@ -8,7 +8,10 @@
 
 .dropdown__arrow {
     position: absolute;
-    display: block;
+    visibility: hidden;
+    opacity: 0;
+    transition-property: visibility, opacity;
+    transition-duration: 0.4s;
     font-size: 1.2rem;
     color: var(--color-grey-lightt);
 }
@@ -23,6 +26,10 @@
 
 .dropdown__content {
     position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition-property: visibility, opacity;
+    transition-duration: 0.4s;
     background-color: rgba(0, 0, 0, 0.9);
 }
 
@@ -36,7 +43,8 @@
     top: 3.7rem;
 }
 
-.dropdown__content--hidden,
-.dropdown__arrow--hidden {
-    display: none;
+.dropdown__content--displayed,
+.dropdown__arrow--displayed {
+    visibility: visible;
+    opacity: 1;
 }
