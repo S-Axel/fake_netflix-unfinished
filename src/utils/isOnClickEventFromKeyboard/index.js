@@ -1,5 +1,5 @@
 /**
- * Checks whether the given onClick event comes from the keyboard or the mouse
+ * Checks whether the given onClick event comes from the keyboard or the mouse / touch
  * @param {SyntheticEvent} e Event from a react onClick listener
  * @returns {boolean}
  */
