@@ -10,20 +10,27 @@ import profileImg from '../../../../../assets/images/profile_picture.png';
 /**
  * @component
  */
-function DropdownTriggerButton({ className, ...rest }) {
+function DropdownTriggerButton({ className, dropdownOpened, ...rest }) {
   return (
     <div
       className={classNames('dropdown-trigger-button', className)}
       {...rest}
     >
       <img className="dropdown-trigger-button__picture" src={profileImg} alt="profile" />
-      <FontAwesomeIcon className="dropdown-trigger-button__caret" icon={faCaretDown} />
+      <FontAwesomeIcon
+        className={classNames('dropdown-trigger-button__caret', { 'dropdown-trigger-button__caret--open': dropdownOpened })}
+        icon={faCaretDown}
+      />
     </div>
   );
 }
 
 DropdownTriggerButton.propTypes = {
   className: PropTypes.string,
+  /**
+   * State of the dropdown, whether it is open or not
+   */
+  dropdownOpened: PropTypes.bool.isRequired,
 };
 
 DropdownTriggerButton.defaultProps = {

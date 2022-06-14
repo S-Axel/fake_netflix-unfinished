@@ -10,6 +10,11 @@
 .dropdown-trigger-button__caret {
     display: none;
     margin-left: 0.7rem;
+    transition: transform 0.4s;
+}
+
+.dropdown-trigger-button__caret--open {
+    transform: rotate(180deg);
 }
 
 @media (min-width: 950px) {

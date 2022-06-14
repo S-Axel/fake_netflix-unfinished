@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
@@ -12,6 +12,11 @@ import DropdownTriggerButton from './DropdownTriggerButton';
  * @component
  */
 function SecondaryNavigation({ className, ...rest }) {
+  const [dropdownOpened, setDropdownOpened] = useState(false);
+  const dropdownToggled = (newValue) => {
+    setDropdownOpened(newValue);
+  };
+
   return (
     <nav
       className={classNames('secondary-navigation', className)}
@@ -21,7 +26,8 @@ function SecondaryNavigation({ className, ...rest }) {
         className="secondary-navigation__dropdown"
         align="bottom-right"
         variant="secondary"
-        buttonContent={<DropdownTriggerButton />}
+        buttonContent={<DropdownTriggerButton dropdownOpened={dropdownOpened} />}
+        toggled={dropdownToggled}
       >
         <ul className="secondary-navigation__dropdown" style={{ width: '11rem' }}>
           <li className="secondary-navigation__dropdown-list-item">
