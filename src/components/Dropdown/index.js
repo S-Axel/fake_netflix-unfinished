@@ -1,4 +1,4 @@
-import { memo, useEffect, useRef, useState } from 'react';
+import { memo, useRef, useState } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
@@ -6,58 +6,44 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './styles.css';
 import Button from '../Button';
-import { BOTTOM_CENTER, BOTTOM_LEFT, BOTTOM_RIGHT } from '../../constants/alignPositions';
-import setRefPosition from '../../utils/setRefPosition';
 import isOnClickEventFromKeyboard from '../../utils/isOnClickEventFromKeyboard';
-
-const arrowAlignStyle = {
-  [BOTTOM_LEFT]: {
-    left: 0,
-  },
-  [BOTTOM_CENTER]: {
-    marginLeft: '-0.5em',
-    left: '50%',
-  },
-  [BOTTOM_RIGHT]: {
-    right: 0,
-  },
-};
 
 /**
  * @component
  */
-function Dropdown({ className, buttonContent, align, variant, children, ...rest }) {
+function Dropdown({ className, buttonContent, variant, toggled, children, ...rest }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const refDropContainer = useRef(null);
   const refDropContent = useRef(null);
 
-  const toggleDropdown = () => {
-    setDropdownOpen((isOpen) => !isOpen);
+  const toggledDropdown = () => {
+    setDropdownOpen((isOpen) => {
+      toggled(!isOpen);
+      return !isOpen;
+    });
   };
   const openDropdown = () => {
     setDropdownOpen(true);
+    toggled(true);
   };
   const closeDropdown = () => {
     setDropdownOpen(false);
+    toggled(false);
   };
 
   const onClickHandler = (e) => {
     if (isOnClickEventFromKeyboard(e)) {
-      toggleDropdown();
+      toggledDropdown();
     } else {
       openDropdown();
     }
   };
 
-  useEffect(() => {
-    setRefPosition(align, refDropContent, refDropContainer);
-  });
-
   return (
     // eslint-disable-next-line jsx-a11y/mouse-events-have-key-events
     <div
       ref={refDropContainer}
-      className={classNames('dropdown__container', className)}
+      className={className}
       onMouseOver={openDropdown}
       onMouseLeave={closeDropdown}
       {...rest}
@@ -70,12 +56,11 @@ function Dropdown({ className, buttonContent, align, variant, children, ...rest 
       >
         {buttonContent}
       </Button>
-      <FontAwesomeIcon
-        className={classNames('dropdown__arrow', `dropdown__arrow--${variant}`, { 'dropdown__arrow--displayed': dropdownOpen })}
-        style={arrowAlignStyle[align]}
-        icon={faCaretUp}
-      />
       <div ref={refDropContent} className={classNames('dropdown__content', `dropdown__content--${variant}`, { 'dropdown__content--displayed': dropdownOpen })}>
+        <FontAwesomeIcon
+          className={classNames('dropdown__arrow', `dropdown__arrow--${variant}`, { 'dropdown__arrow--displayed': dropdownOpen })}
+          icon={faCaretUp}
+        />
         {children}
       </div>
     </div>
@@ -89,13 +74,13 @@ Dropdown.propTypes = {
    */
   buttonContent: PropTypes.node.isRequired,
   /**
-   * Position of the dropdown according the trigger button
-   */
-  align: PropTypes.oneOf([BOTTOM_LEFT, BOTTOM_CENTER, BOTTOM_RIGHT]),
-  /**
    * Variant of Dropdown, one of ['primary', 'secondary']
    */
   variant: PropTypes.oneOf(['primary', 'secondary']).isRequired,
+  /**
+   * Called each time the dropdown is toggled, with a boolean argument whether it is open or not
+   */
+  toggled: PropTypes.func,
   /**
    * Content of the opened dropdown
    */
@@ -105,7 +90,7 @@ Dropdown.propTypes = {
 
 Dropdown.defaultProps = {
   className: '',
-  align: BOTTOM_CENTER,
+  toggled: () => {},
 };
 
 export default memo(Dropdown);
