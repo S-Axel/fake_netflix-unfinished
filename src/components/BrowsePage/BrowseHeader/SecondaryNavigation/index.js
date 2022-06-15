@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import './styles.css';
-import SecNavDropdownLink from './SecNavDropdownLink';
+import SecondaryDropdownLink from './SecondaryDropdownLink';
 import Dropdown from '../../../Dropdown';
 import DropdownTriggerButton from './DropdownTriggerButton';
 
@@ -31,7 +31,7 @@ function SecondaryNavigation({ className, ...rest }) {
       >
         <ul className="secondary-navigation__dropdown" style={{ width: '11rem' }}>
           <li className="secondary-navigation__dropdown-list-item">
-            <SecNavDropdownLink className="secondary-navigation__dropdown-list-item-link" to="/signOut">Sign out of netflix</SecNavDropdownLink>
+            <SecondaryDropdownLink className="secondary-navigation__dropdown-list-item-link" to="/signOut">Sign out of netflix</SecondaryDropdownLink>
           </li>
         </ul>
       </Dropdown>

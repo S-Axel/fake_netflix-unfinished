@@ -12,11 +12,11 @@ import { NavLink } from 'react-router-dom';
  *
  * @component
  */
-function PrimNavFlatLink({ className, to, children, ...rest }) {
+function PrimaryFlatLink({ className, to, children, ...rest }) {
   const getClassNames = ({ isActive }) => classNames(
-    'prim-nav-flat-link',
+    'primary-flat-link',
     {
-      'prim-nav-flat-link--active': isActive,
+      'primary-flat-link--active': isActive,
     },
     className,
   );
@@ -32,7 +32,7 @@ function PrimNavFlatLink({ className, to, children, ...rest }) {
   );
 }
 
-PrimNavFlatLink.propTypes = {
+PrimaryFlatLink.propTypes = {
   className: PropTypes.string,
   /**
    * Content of the link
@@ -44,8 +44,8 @@ PrimNavFlatLink.propTypes = {
   to: PropTypes.string.isRequired,
 };
 
-PrimNavFlatLink.defaultProps = {
+PrimaryFlatLink.defaultProps = {
   className: '',
 };
 
-export default memo(PrimNavFlatLink);
+export default memo(PrimaryFlatLink);

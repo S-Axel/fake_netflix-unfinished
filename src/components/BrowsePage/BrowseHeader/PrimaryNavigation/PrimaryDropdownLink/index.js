@@ -6,16 +6,24 @@ import './styles.css';
 import { NavLink } from 'react-router-dom';
 
 /**
- * navigation link for SecondaryNavigation component.
+ * navigation link for PrimaryNavigation component.
  * Dropdown version.
  * Built on top of NavLink.
  *
  * @component
  */
-function SecNavDropdownLink({ className, to, children, ...rest }) {
+function PrimaryDropdownLink({ className, to, children, ...rest }) {
+  const getClassNames = ({ isActive }) => classNames(
+    'primary-dropdown-link',
+    {
+      'primary-dropdown-link--active': isActive,
+    },
+    className,
+  );
+
   return (
     <NavLink
-      className={classNames('sec-nav-dropdown-link', className)}
+      className={getClassNames}
       to={to}
       {...rest}
     >
@@ -24,7 +32,7 @@ function SecNavDropdownLink({ className, to, children, ...rest }) {
   );
 }
 
-SecNavDropdownLink.propTypes = {
+PrimaryDropdownLink.propTypes = {
   className: PropTypes.string,
   /**
    * Content of the link
@@ -36,8 +44,8 @@ SecNavDropdownLink.propTypes = {
   to: PropTypes.string.isRequired,
 };
 
-SecNavDropdownLink.defaultProps = {
+PrimaryDropdownLink.defaultProps = {
   className: '',
 };
 
-export default memo(SecNavDropdownLink);
+export default memo(PrimaryDropdownLink);

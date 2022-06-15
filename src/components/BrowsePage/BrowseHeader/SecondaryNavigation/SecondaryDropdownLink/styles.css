@@ -1,8 +1,8 @@
-.sec-nav-dropdown-link {
+.secondary-dropdown-link {
     color: var(--color-grey-lightt);
     text-decoration: none;
 }
 
-.sec-nav-dropdown-link:hover {
+.secondary-dropdown-link:hover {
     text-decoration: underline;
 }

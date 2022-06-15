@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 import './styles.css';
-import PrimNavFlatLink from './PrimNavFlatLink';
-import PrimNavDropdownLink from './PrimNavDropdownLink';
+import PrimaryFlatLink from './PrimaryFlatLink';
+import PrimaryDropdownLink from './PrimaryDropdownLink';
 import Dropdown from '../../../Dropdown';
 
 /**
@@ -32,37 +32,37 @@ function PrimaryNavigation({ className, ...rest }) {
       >
         <ul className="primary-navigation__dropdown" style={{ width: '27em' }}>
           <li className="primary-navigation__dropdown-list-item">
-            <PrimNavDropdownLink className="primary-navigation__dropdown-list-item-link" to="/browse">Home</PrimNavDropdownLink>
+            <PrimaryDropdownLink className="primary-navigation__dropdown-list-item-link" to="/browse">Home</PrimaryDropdownLink>
           </li>
           <li className="primary-navigation__dropdown-list-item">
-            <PrimNavDropdownLink className="primary-navigation__dropdown-list-item-link" to="/">TV Shows</PrimNavDropdownLink>
+            <PrimaryDropdownLink className="primary-navigation__dropdown-list-item-link" to="/">TV Shows</PrimaryDropdownLink>
           </li>
           <li className="primary-navigation__dropdown-list-item">
-            <PrimNavDropdownLink className="primary-navigation__dropdown-list-item-link" to="/">Movies</PrimNavDropdownLink>
+            <PrimaryDropdownLink className="primary-navigation__dropdown-list-item-link" to="/">Movies</PrimaryDropdownLink>
           </li>
           <li className="primary-navigation__dropdown-list-item">
-            <PrimNavDropdownLink className="primary-navigation__dropdown-list-item-link" to="/">New & Popular</PrimNavDropdownLink>
+            <PrimaryDropdownLink className="primary-navigation__dropdown-list-item-link" to="/">New & Popular</PrimaryDropdownLink>
           </li>
           <li className="primary-navigation__dropdown-list-item">
-            <PrimNavDropdownLink className="primary-navigation__dropdown-list-item-link" to="/">My List</PrimNavDropdownLink>
+            <PrimaryDropdownLink className="primary-navigation__dropdown-list-item-link" to="/">My List</PrimaryDropdownLink>
           </li>
         </ul>
       </Dropdown>
       <ul className="primary-navigation__flat">
         <li className="primary-navigation__flat-list-item">
-          <PrimNavFlatLink to="/browse">Home</PrimNavFlatLink>
+          <PrimaryFlatLink to="/browse">Home</PrimaryFlatLink>
         </li>
         <li className="primary-navigation__flat-list-item">
-          <PrimNavFlatLink to="/">TV Shows</PrimNavFlatLink>
+          <PrimaryFlatLink to="/">TV Shows</PrimaryFlatLink>
         </li>
         <li className="primary-navigation__flat-list-item">
-          <PrimNavFlatLink to="/">Movies</PrimNavFlatLink>
+          <PrimaryFlatLink to="/">Movies</PrimaryFlatLink>
         </li>
         <li className="primary-navigation__flat-list-item">
-          <PrimNavFlatLink to="/">New & Popular</PrimNavFlatLink>
+          <PrimaryFlatLink to="/">New & Popular</PrimaryFlatLink>
         </li>
         <li className="primary-navigation__flat-list-item">
-          <PrimNavFlatLink to="/">My List</PrimNavFlatLink>
+          <PrimaryFlatLink to="/">My List</PrimaryFlatLink>
         </li>
       </ul>
     </nav>

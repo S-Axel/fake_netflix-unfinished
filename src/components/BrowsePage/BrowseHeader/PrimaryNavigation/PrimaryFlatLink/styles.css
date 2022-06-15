@@ -1,20 +1,19 @@
-.prim-nav-dropdown-link {
+.primary-flat-link {
     color: var(--color-grey-lightt);
     text-decoration: none;
     transition-property: color;
     transition-duration: 0.4s;
 }
 
-.prim-nav-dropdown-link:hover {
+.primary-flat-link:hover {
     color: var(--color-grey-light);
-    background-color: rgba(255, 255, 255, 0.05);
 }
 
-.prim-nav-dropdown-link--active {
+.primary-flat-link--active {
     color: var(--color-white);
     font-weight: 700;
 }
 
-.prim-nav-dropdown-link--active:hover {
+.primary-flat-link--active:hover {
     color: var(--color-white);
 }
