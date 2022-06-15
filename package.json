@@ -37,27 +37,6 @@
     "eject": "react-scripts eject",
     "docs": "jsdoc -c jsdoc.conf.json"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest",
-      "airbnb"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.js"
-        ],
-        "rules": {
-          "react/react-in-jsx-scope": "off",
-          "react/jsx-filename-extension": "off",
-          "object-curly-newline": "off",
-          "react/jsx-props-no-spreading": "off",
-          "import/prefer-default-export": "off"
-        }
-      }
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
