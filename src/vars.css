@@ -4,6 +4,9 @@
     --color-warning: #e87c03;
     --color-warning-foreground: #ffd9ad;
     --color-warning-background: #191207;
+    --color-error: #e80303;
+    --color-error-foreground: #ffadad;
+    --color-error-background: #190707;
     --color-white: #fff;
     --color-black: #000;
     --color-grey-lightt: #e5e5e5;

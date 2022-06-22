@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTriangleExclamation, faXmark } from '@fortawesome/free-solid-svg-icons';
+import { faTriangleExclamation, faCircleXmark, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 /**
  * @category Components
@@ -15,6 +15,7 @@ import { faTriangleExclamation, faXmark } from '@fortawesome/free-solid-svg-icon
 function Alert({ className, severity, onClose, children, ...rest }) {
   const severityToIcon = {
     warning: faTriangleExclamation,
+    error: faCircleXmark,
   };
 
   return (
@@ -38,9 +39,9 @@ function Alert({ className, severity, onClose, children, ...rest }) {
 Alert.propTypes = {
   className: PropTypes.string,
   /**
-   * HTML button type attribute, one of [ 'warning' ]
+   * HTML button type attribute, one of [ 'warning' | 'error' ]
    */
-  severity: PropTypes.oneOf(['warning']),
+  severity: PropTypes.oneOf(['warning', 'error']),
   /**
    * Called on close button click
    */

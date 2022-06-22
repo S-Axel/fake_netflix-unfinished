@@ -33,3 +33,16 @@
 .alert--warning .alert__icon {
     color: var(--color-warning);
 }
+
+.alert--error {
+    color: var(--color-error-foreground);
+    background-color: var(--color-error-background);
+}
+
+.alert--error .alert__button {
+    color: var(--color-error-foreground);
+}
+
+.alert--error .alert__icon {
+    color: var(--color-error);
+}
