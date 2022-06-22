@@ -1,4 +1,5 @@
 .alert {
+    position: relative;
     padding: 0.6rem;
     font-size: 0.9em;
 }
@@ -6,10 +7,29 @@
     padding-right: 0.5rem;
 }
 
+.alert__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    padding: 0.2rem;
+    opacity: 0.3;
+}
+
+.alert__button:hover {
+    opacity: 1;
+}
+
 .alert--warning {
     color: var(--color-warning-foreground);
     background-color: var(--color-warning-background);
 }
+
+.alert--warning .alert__button {
+    color: var(--color-warning-foreground);
+}
+
 .alert--warning .alert__icon {
     color: var(--color-warning);
 }

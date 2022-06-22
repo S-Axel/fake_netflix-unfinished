@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import './styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
+import { faTriangleExclamation, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 /**
  * @category Components
@@ -12,7 +12,7 @@ import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
  *
  * @component
  */
-function Alert({ className, severity, children, ...rest }) {
+function Alert({ className, severity, onClose, children, ...rest }) {
   const severityToIcon = {
     warning: faTriangleExclamation,
   };
@@ -22,6 +22,13 @@ function Alert({ className, severity, children, ...rest }) {
       className={classNames('alert', `alert--${severity}`, className)}
       {...rest}
     >
+      {
+        onClose && (
+          <button type="button" className="alert__button" name="close" onClick={onClose}>
+            <FontAwesomeIcon icon={faXmark} />
+          </button>
+        )
+      }
       <FontAwesomeIcon icon={severityToIcon[severity]} className="alert__icon" />
       {children}
     </div>
@@ -35,6 +42,10 @@ Alert.propTypes = {
    */
   severity: PropTypes.oneOf(['warning']),
   /**
+   * Called on close button click
+   */
+  onClose: PropTypes.func,
+  /**
    * Content, text inside the alert
    */
   children: PropTypes.node,
@@ -43,6 +54,7 @@ Alert.propTypes = {
 Alert.defaultProps = {
   className: '',
   severity: 'warning',
+  onClose: null,
   children: PropTypes.node,
 };
 
