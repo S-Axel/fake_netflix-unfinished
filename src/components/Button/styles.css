@@ -1,0 +1,53 @@
+.button {
+    padding: 1em;
+    width: 100%;
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.button--loading {
+    padding: 0.4em;
+    font-size: 2em;
+}
+
+/* Define color variables */
+
+.button--primary {
+    --button-color-primary: var(--color-primary);
+    --button-color-primary-dark: var(--color-primary-dark);
+    --button-color-secondary: var(--color-white);
+    --button-color-secondary-dark: var(--color-grey);
+}
+
+.button--secondary {
+    --button-color-primary: var(--color-white);
+    --button-color-primary-dark: var(--color-grey);
+    --button-color-secondary: var(--color-primary);
+    --button-color-secondary-dark: var(--color-primary-dark);
+}
+
+/* Define variants */
+
+/* variant contained */
+.button--contained {
+    color: var(--button-color-secondary);
+    background-color: var(--button-color-primary);
+}
+
+.button--contained.button--loading {
+    color: var(--button-color-secondary-dark);
+    background-color: var(--button-color-primary-dark);
+}
+
+/* variant text */
+.button--text {
+    color: var(--button-color-primary);
+}
+
+.button--text.button--loading {
+    color: var(--button-color-primary-dark);
+}

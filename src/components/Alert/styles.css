@@ -1,0 +1,38 @@
+.alert--warning {
+    --color: var(--color-warning);
+    --color-background: var(--color-warning-background);
+    --color-foreground: var(--color-warning-foreground);
+}
+
+.alert--error {
+    --color: var(--color-error);
+    --color-background: var(--color-error-background);
+    --color-foreground: var(--color-error-foreground);
+}
+
+.alert {
+    position: relative;
+    padding: 0.6rem;
+    font-size: 0.9em;
+    color: var(--color-foreground);
+    background-color: var(--color-background);
+}
+.alert__icon {
+    padding-right: 0.5rem;
+    color: var(--color);
+}
+
+.alert__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    padding: 0.2rem;
+    opacity: 0.3;
+    color: var(--color-foreground);
+}
+
+.alert__button:hover {
+    opacity: 1;
+}

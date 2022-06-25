@@ -1,0 +1,19 @@
+.primary-flat-link {
+    color: var(--color-grey-lightt);
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.4s;
+}
+
+.primary-flat-link:hover {
+    color: var(--color-grey-light);
+}
+
+.primary-flat-link--active {
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.primary-flat-link--active:hover {
+    color: var(--color-white);
+}

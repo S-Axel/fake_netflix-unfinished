@@ -1,0 +1,35 @@
+.browse-header {
+    position: absolute;
+    width: 100%;
+    height: 2.5rem;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0.7) 10% ,rgba(0, 0, 0, 0) 100%);
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+}
+
+.browse-header__logo {
+    margin-left: 3%;
+    height: 1rem;
+    font-size: 1rem;
+}
+
+.browse-header__primary-navigation {
+    margin-left: 1.2rem;
+}
+
+.browse-header__secondary-navigation {
+    position: absolute;
+    right: 3%;
+}
+
+@media (min-width: 950px) {
+    .browse-header {
+        height: 4.25rem;
+        font-size: 1rem;
+    }
+    .browse-header__logo {
+        height: 2rem;
+        font-size: 2rem;
+    }
+}

@@ -1,0 +1,24 @@
+.dropdown-trigger-button {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-trigger-button__picture {
+    border-radius: 4px;
+}
+
+.dropdown-trigger-button__caret {
+    display: none;
+    margin-left: 0.7rem;
+    transition: transform 0.4s;
+}
+
+.dropdown-trigger-button__caret--open {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 950px) {
+    .dropdown-trigger-button__caret {
+        display: inline;
+    }
+}
