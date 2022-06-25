@@ -10,7 +10,7 @@
     margin: 0 0 1.67rem;
 }
 
-.login-form__warning,
+.login-form__alert-stack,
 .login-form__text-field {
     margin-bottom: 1rem;
 }

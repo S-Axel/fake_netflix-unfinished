@@ -6,7 +6,7 @@ import TextField from '../../TextField';
 import Button from '../../Button';
 import useForm from '../../../hooks/useForm';
 import { validateEmailOrPhone, validatePassword } from '../../../validators';
-import Alert from '../../Alert';
+import AlertStack from '../../AlertStack';
 
 /**
  * Login form
@@ -16,7 +16,7 @@ import Alert from '../../Alert';
  *
  * @component
  */
-function LoginForm({ className, submit, submitButtonSpinning }) {
+function LoginForm({ className, submit, submitButtonSpinning, alerts, closeAlert }) {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const rootClassNames = classNames('login-form', className);
@@ -32,12 +32,7 @@ function LoginForm({ className, submit, submitButtonSpinning }) {
     <main className={rootClassNames}>
       <h1 className="login-form__title">Sign In</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Alert className="login-form__warning">
-          This is NOT the Netflix website.
-        </Alert>
-        <Alert className="login-form__warning">
-          Do NOT enter your Netflix credentials.
-        </Alert>
+        <AlertStack className="login-form__alert-stack" alerts={alerts} closeAlert={closeAlert} />
         <TextField
           className="login-form__text-field"
           label="Email or phone number"
@@ -73,6 +68,15 @@ LoginForm.propTypes = {
    * Add a spinner inside the submit button
    */
   submitButtonSpinning: PropTypes.bool,
+  /**
+   * Array of alerts
+   */
+  alerts: PropTypes.arrayOf(PropTypes.object).isRequired,
+  /**
+   * Callback function called when a user attempts to close an alert.
+   * The index of the alert is given as first parameter : closeAlert(alertIndex)
+   */
+  closeAlert: PropTypes.func.isRequired,
 };
 
 LoginForm.defaultProps = {
